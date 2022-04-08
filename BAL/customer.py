@@ -13,3 +13,7 @@ def get_customer(_id: int):
 
 def get_customer_by_last_name(_name: str):
     return dta.execute_select_query("Customer", params={'Last_Name': _name})
+
+
+def get_customer_by_last_first_name(last: str, first: str):
+    return dta.execute_select_query("Customer", params={'Last_Name': last, 'First_Name': first})
